@@ -481,7 +481,7 @@
             prompt_type: promptType
           });
 
-          const streamUrl = 'https://shop-chat-agent-production.up.railway.app/chat';
+          const streamUrl = 'https://shop-chat-agent-production-3b91.up.railway.app/chat';
           const shopId = window.shopId;
 
           const response = await fetch(streamUrl, {
@@ -630,7 +630,7 @@
           messagesContainer.appendChild(loadingMessage);
 
           // Fetch history from the server
-          const historyUrl = `https://shop-chat-agent-production.up.railway.app/chat?history=true&conversation_id=${encodeURIComponent(conversationId)}`;
+          const historyUrl = `https://shop-chat-agent-production-3b91.up.railway.app/chat?history=true&conversation_id=${encodeURIComponent(conversationId)}`;
           console.log('Fetching history from:', historyUrl);
 
           const response = await fetch(historyUrl, {
@@ -779,7 +779,7 @@
           attemptCount++;
 
           try {
-            const tokenUrl = 'https://shop-chat-agent-production.up.railway.app/auth/token-status?conversation_id=' +
+            const tokenUrl = 'https://shop-chat-agent-production-3b91.up.railway.app/auth/token-status?conversation_id=' +
               encodeURIComponent(conversationId);
             const response = await fetch(tokenUrl);
 
