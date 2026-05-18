@@ -126,7 +126,7 @@ async function handleChatSession({
   // Initialize MCP client
   const shopId = request.headers.get("X-Shopify-Shop-Id");
   const shopDomain = request.headers.get("Origin");
-  const { mcpApiUrl } = await getCustomerAccountUrls(shopDomain, conversationId);
+  const { mcpApiUrl } = (await getCustomerAccountUrls(shopDomain, conversationId)) || {};
 
   const mcpClient = new MCPClient(
     shopDomain,
